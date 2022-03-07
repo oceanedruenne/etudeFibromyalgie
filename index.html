@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <script src="echarts.js"></script>
+        <meta name="description" content="Résultats de l'étude sur la fibromyalgie réalisée par Océane Druenne"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="CSS/style.css" />
+        <link rel="stylesheet" href="CSS/responsive.css"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="img/medecine.png">
+
+        <title>Étude sur la fibromyalgie</title>
+    </head>
+    <body>
+        <header>
+            <h1>Résultats de l'étude sur la fibromyalgie</h1>
+            <h2>Réalisée par Océane Druenne</h2>
+        </header>
+        <hr color="#000000">
+        <div class="content">
+            <div>
+                <p>
+                    Dans le cadre de mes études en Informatique, je dois réaliser un dossier sur un sujet quelconque dans un but pédagogique. 
+                    J'ai donc décidé de choisir la fibromyalgie comme sujet car j'ai été diagnostiqué fibromyalgique depuis bientôt 2 ans et je trouve que cette maladie est encore mal connue.
+                    L'étude a duré 2 jours, sur un échantillon de 250 personnes. Vous pouvez trouver les résultats ci-dessous.
+                </p>
+            </div>
+            <div class="scroll-down">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="informations">
+                <h3 class="fade-in">Informations concernant l'échantillon</h3>
+                <div id="main" style="width: 600px;height:400px;"></div>
+                <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('main'));
+                    var option = {
+                        title: {
+                            text: 'Sexe des personnes',
+                            subtext: '244 réponses',
+                            left: 'center'
+                        },
+                        tooltip: {
+                            trigger: 'item'
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            left: 'left'
+                        },
+                        series: 
+                        [
+                            {
+                                name: 'Sexe',
+                                type: 'pie',
+                                color: ['#1dd1a1', '#ff9f43', '#f368e0'],
+                                radius: '50%',
+                                data: 
+                                [
+                                    { value: 230, name: 'Femme' },
+                                    { value: 12, name: 'Homme' },
+                                    { value: 2, name: 'Ne souhaite pas répondre' }
+                                ],
+                                emphasis: 
+                                {
+                                    itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                    }
+                                }
+                            }
+                        ]
+                    };
+                    myChart.setOption(option);
+                </script>
+                 <div id="main_2" style="width: 600px;height:400px;"></div>
+                 <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('main_2'));
+                    var option = {
+                    title: {
+                        text: 'Âge des personnes',
+                        subtext: '244 réponses',
+                        left: 'center'
+                    },
+                    tooltip: {
+                        trigger: 'item'
+                    },
+                    legend: {
+                        orient: 'vertical',
+                        left: 'left'
+                    },
+                    series: [
+                        {
+                            name: 'Âge',
+                            type: 'pie',
+                            color: ['#B33771', '#FC427B', '#FEA47F', "#25CCF7"],
+                            radius: '50%',
+                            data: [
+                                { value: 4, name: 'Moins de 18 ans' },
+                                { value: 42, name: '18 - 25 ans' },
+                                { value: 49, name: '25 - 35 ans' },
+                                { value: 149, name: '35 ans et plus ' },
+                            ],
+                            emphasis: 
+                            {
+                                itemStyle: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            }
+                        }
+                    ]
+                    }; 
+                    myChart.setOption(option);     
+                </script>
+            </div>
+            <div id="fibromyalgie">
+                <h3 class="fade-in">Connaissance de l'échantillon sur la fibromyalgie</h3>
+                <div id="main_3" style="width: 600px;height:400px;" ></div>
+                <script type="text/javascript">
+                   var myChart = echarts.init(document.getElementById('main_3'));
+                   var option = 
+                   {
+                        title: {
+                            text: 'Connaissance de la fibromyalgie',
+                            subtext: '243 réponses',
+                            left: 'center'
+                        },
+                        tooltip: {
+                            trigger: 'item'
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            left: 'left'
+                        },
+                        series: 
+                        [
+                            {
+                                name: 'Connaissance',
+                                type: 'pie',
+                                color: ["#f8a5c2", "#63cdda"],
+                                radius: '50%',
+                                data: [
+                                    { value: 224, name: 'Oui' },
+                                    { value: 19, name: 'Non' },
+                                ],
+                                emphasis: 
+                                {
+                                    itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                    }
+                                }
+                            }
+                        ]
+                    };
+                   myChart.setOption(option);     
+               </script>
+                <div id="main_4" style="width: 600px;height:400px;" ></div>
+                <script type="text/javascript">
+                       var myChart = echarts.init(document.getElementById('main_4'));
+                       var option = {
+                            title: {
+                                text: 'Mots fréquents',
+                                subtext: '222 réponses',
+                                left: 'center'
+                            },
+                            tooltip: {
+                                trigger: 'item'
+                            },
+                            legend: {
+                                orient: 'vertical',
+                                left: 'left'
+                            },
+                            series: 
+                            [
+                                {
+                                    name: 'Mot',
+                                    type: 'pie',
+                                    radius: '50%',
+                                    color: ['#080808', '#CC0058', '#B119A2',"#9532EC", "#6C66F5","#439AFE","#3CC2E8", "#35E9D1"],
+                                    data: [
+                                        { value: 175, name: 'Douleurs' },
+                                        { value: 79, name: 'Fatigue' },
+                                        { value: 20, name: 'Incompréhension' },
+                                        { value: 34, name: 'Chronique' },
+                                        { value: 20, name: 'Handicap' },
+                                        { value: 18, name: 'Maladie' },
+                                        { value: 18, name: 'Souffrance' },
+                                        { value: 11, name: 'Invisible' },
+                                    ],
+                                    emphasis: 
+                                    {
+                                        itemStyle: {
+                                        shadowBlur: 10,
+                                        shadowOffsetX: 0,
+                                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                        }
+                                    }
+                                }
+                            ]
+                        };
+                        myChart.setOption(option);  
+                </script>
+                 <div id="main_5" style="width: 600px;height:400px;" ></div>
+                 <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('main_5'));
+                    var option = {
+                        title: {
+                            text: 'Personnes atteintes de fibromyalgie',
+                            subtext: '241 réponses',
+                            left: 'center'
+                        },
+                        tooltip: {
+                            trigger: 'item'
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            left: 'left'
+                        },
+                        series: [
+                            {
+                                name: 'Access From',
+                                type: 'pie',
+                                radius: '50%',
+                                color: ['#9B5DE5', '#F15BB5', '#FEE440',"#00BBF9"],
+                                data: [
+                                    { value: 197, name: 'Oui' },
+                                    { value: 23, name: 'Non' },
+                                    { value: 17, name: 'En cours de diagnostic' },
+                                    { value: 4, name: 'Je pense' },
+                                ],
+                                emphasis: 
+                                {
+                                    itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                    }
+                                }
+                            }
+                        ]
+                    };
+                    myChart.setOption(option);  
+                </script>
+                 <div id="main_6" style="width: 600px;height:400px;" ></div>
+                 <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('main_6'));
+                    var option = {
+                        title: {
+                            text: 'Le diagnostic a-t-il été compliqué à poser ?',
+                            subtext: '209 réponses',
+                            left: 'center'
+                        },
+                        tooltip: {
+                            trigger: 'item'
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            left: 'left'
+                        },
+                        series: [
+                            {
+                                name: 'Difficile',
+                                type: 'pie',
+                                radius: '50%',
+                                color: ['#57ebde', '#aefb2a'],
+                                data: [
+                                    { value: 155, name: 'Oui' },
+                                    { value: 54, name: 'Non' },
+                                ],
+                                emphasis: {
+                                    itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                    }
+                                }
+                            }
+                        ]
+                    };
+                    myChart.setOption(option);
+                    </script>
+                    <div id="main_7" style="width: 600px;height:400px;" ></div>
+                    <script type="text/javascript">
+                       var myChart = echarts.init(document.getElementById('main_7'));
+                       var option =  {
+                            title: {
+                                text: 'Symptômes de la fibromyalgie',
+                                subtext: '217 réponses',
+                                left: 'center'
+                            },
+                            tooltip: {
+                                trigger: 'item'
+                            },
+                            legend: {
+                                orient: 'vertical',
+                                left: 'left'
+                            },
+                            series: 
+                            [
+                                {
+                                    name: 'Symptômes',
+                                    type: 'pie',
+                                    radius: '50%',
+                                    color: ['#8DBD05', '#00A1AE','#5E36CC',"#FE318E","#FF7540","#FD9800"],
+                                    data: [
+                                        { value: 213, name: 'Douleurs articulaires' },
+                                        { value: 193, name: 'Troubles neurologiques' },
+                                        { value: 144, name: 'Troubles digestifs' },
+                                        { value: 161, name: 'Troubles psy' },
+                                        { value: 29, name: 'Fatigue' },
+                                        { value: 10, name: 'Migraine' },
+                                        
+                                    ],
+                                    emphasis: 
+                                    {
+                                        itemStyle: {
+                                        shadowBlur: 10,
+                                        shadowOffsetX: 0,
+                                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                        }
+                                    }
+                                }
+                            ]
+                        };
+                        myChart.setOption(option);
+                    </script>
+                    <div id="main_8" style="width: 600px;height:400px;" ></div>
+                        <script type="text/javascript">
+                            var myChart = echarts.init(document.getElementById('main_8'));
+                            var option = 
+                            {
+                                title: {
+                                    text: 'Types de médicaments pris',
+                                    subtext: '217 réponses',
+                                    left: 'center'
+                                },
+                                tooltip: {
+                                    trigger: 'item'
+                                },
+                                legend: {
+                                    orient: 'vertical',
+                                    left: 'left'
+                                },
+                                series: 
+                                [
+                                    {
+                                        name: 'Médicament',
+                                        type: 'pie',
+                                        radius: '50%',
+                                        color: ['#FFBE0B', '#FB5607','#FF006E',"#C11CAD","#8338EC","#3A86FF"],
+                                        data: [
+                                            { value: 163, name: 'Antidouleurs' },
+                                            { value: 59, name: 'Anxiolytiques' },
+                                            { value: 58, name: 'Somnifères' },
+                                            { value: 119, name: 'Anti-dépresseurs' },
+                                            { value: 31, name: 'Laxatifs' },
+                                            { value: 7, name: 'Rien' },
+                                            
+                                        ],
+                                        emphasis: 
+                                        {
+                                            itemStyle: {
+                                            shadowBlur: 10,
+                                            shadowOffsetX: 0,
+                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                            }
+                                        }
+                                    }
+                                ]
+                            };
+                            myChart.setOption(option);
+                        </script>
+                    </div>
+                </div>
+            </body>
+</html>
