@@ -53,7 +53,7 @@
                             {
                                 name: 'Sexe',
                                 type: 'pie',
-                                color: ['#1dd1a1', '#ff9f43', '#f368e0'],
+                                color: ['#F514A6', '#43FF0A', '#0aa1ff'],
                                 radius: '50%',
                                 data: 
                                 [
@@ -94,7 +94,7 @@
                         {
                             name: 'Âge',
                             type: 'pie',
-                            color: ['#B33771', '#FC427B', '#FEA47F', "#25CCF7"],
+                            color: ['#c200fb', '#ec0868', '#fc2f00', "#ec7d10"],
                             radius: '50%',
                             data: [
                                 { value: 4, name: 'Moins de 18 ans' },
@@ -140,7 +140,7 @@
                             {
                                 name: 'Connaissance',
                                 type: 'pie',
-                                color: ["#f8a5c2", "#63cdda"],
+                                color: ["#00a6ed", "#7fb800"],
                                 radius: '50%',
                                 data: [
                                     { value: 224, name: 'Oui' },
@@ -181,7 +181,7 @@
                                     name: 'Mot',
                                     type: 'pie',
                                     radius: '50%',
-                                    color: ['#080808', '#CC0058', '#B119A2',"#9532EC", "#6C66F5","#439AFE","#3CC2E8", "#35E9D1"],
+                                    color: ['#87e6d9', '#CC0058', '#B119A2',"#9532EC", "#6C66F5","#439AFE","#3CC2E8", "#35E9D1"],
                                     data: [
                                         { value: 175, name: 'Douleurs' },
                                         { value: 79, name: 'Fatigue' },
@@ -226,7 +226,7 @@
                                 name: 'Access From',
                                 type: 'pie',
                                 radius: '50%',
-                                color: ['#9B5DE5', '#F15BB5', '#FEE440',"#00BBF9"],
+                                color: ['#97cc04', '#2d7dd2', '#eeb902',"#f45d01"],
                                 data: [
                                     { value: 197, name: 'Oui' },
                                     { value: 23, name: 'Non' },
@@ -361,6 +361,180 @@
                                             { value: 31, name: 'Laxatifs' },
                                             { value: 7, name: 'Rien' },
                                             
+                                        ],
+                                        emphasis: 
+                                        {
+                                            itemStyle: {
+                                            shadowBlur: 10,
+                                            shadowOffsetX: 0,
+                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                            }
+                                        }
+                                    }
+                                ]
+                            };
+                            myChart.setOption(option);
+                        </script>
+                         <div id="main_9" style="width: 600px;height:400px;" ></div>
+                         <script type="text/javascript">
+                            var myChart = echarts.init(document.getElementById('main_9'));
+                            var option = {
+                                title: 
+                                {
+                                    text: 'Équipe suiveuse',
+                                    subtext: '218 personnes',
+                                    left: 'center'
+                                },
+                                tooltip: {
+                                    trigger: 'item'
+                                },
+                                legend: {
+                                    orient: 'vertical',
+                                    left: 'left'
+                                },
+                                series: 
+                                [
+                                    {
+                                        name: 'Suivi',
+                                        type: 'pie',
+                                        radius: '50%',
+                                        color: ['#00F6CC', '#A4F603','#F4F503',"#F800A4","#F601EB","#DC03F5","#A306F6","#0BA5F6"],
+                                        data: [
+                                            { value: 194, name: 'Médecin généraliste' },
+                                            { value: 58, name: 'Psychologue' },
+                                            { value: 41, name: 'Psychiatre' },
+                                            { value: 108, name: 'Kinésithérapeute' },
+                                            { value: 41, name: 'Algologue' },
+                                            { value: 118, name: 'Rhumatologue' },
+                                            { value: 40, name: 'Gastro-entérologue' },
+                                            { value: 55, name: 'Neurologue' },
+                                        ],
+                                        emphasis: 
+                                        {
+                                            itemStyle: {
+                                            shadowBlur: 10,
+                                            shadowOffsetX: 0,
+                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                            }
+                                        }
+                                    }
+                                ]
+                            };
+                            myChart.setOption(option);
+                        </script>
+                        <div id="main_10" style="width: 600px;height:400px;" ></div>
+                        <script type="text/javascript">
+                           var myChart = echarts.init(document.getElementById('main_10'));
+                           var option = {
+                                title: {
+                                    text: 'Budget santé élevé',
+                                    subtext: '210 personnes',
+                                    left: 'center'
+                                },
+                                tooltip: {
+                                    trigger: 'item'
+                                },
+                                legend: {
+                                    orient: 'vertical',
+                                    left: 'left'
+                                },
+                                series: 
+                                [
+                                    {
+                                        name: 'Budget',
+                                        type: 'pie',
+                                        radius: '50%',
+                                        color: ['#f15bb5', '#00a6ed'],
+                                        data: [
+                                            { value: 194, name: 'Oui' },
+                                            { value: 58, name: 'Non' },
+                                        ],
+                                        emphasis: {
+                                            itemStyle: {
+                                            shadowBlur: 10,
+                                            shadowOffsetX: 0,
+                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                            }
+                                        }
+                                    }
+                                ]
+                            };
+                            myChart.setOption(option);
+                        </script>
+                        <div id="main_11" style="width: 600px;height:400px;" ></div>
+                        <script type="text/javascript">
+                            var myChart = echarts.init(document.getElementById('main_11'));
+                            var option = 
+                            {
+                                title: 
+                                {
+                                    text: 'Fibromyalgie connue des pros de santé',
+                                    subtext: '221 personnes',
+                                    left: 'center'
+                                },
+                                tooltip: {
+                                    trigger: 'item'
+                                },
+                                legend: {
+                                    orient: 'vertical',
+                                    left: 'left'
+                                },
+                                series: 
+                                [
+                                    {
+                                        name: 'Connu',
+                                        type: 'pie',
+                                        radius: '50%',
+                                        color: ['#48e5c2', '#9b5de5'],
+                                        data: [
+                                            { value: 212, name: 'Oui' },
+                                            { value: 9, name: 'Non' },
+                                        ],
+                                        emphasis: {
+                                            itemStyle: {
+                                            shadowBlur: 10,
+                                            shadowOffsetX: 0,
+                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                            }
+                                        }
+                                    }
+                                ]
+                            };
+                            myChart.setOption(option);
+                        </script>
+                         <div id="main_12" style="width: 600px;height:400px;" ></div>
+                         <script type="text/javascript">
+                            var myChart = echarts.init(document.getElementById('main_12'));
+                            var option = 
+                            {
+                                title: 
+                                {
+                                    text: 'Impact de la fibromyalgie (/10)',
+                                    subtext: '217 personnes',
+                                    left: 'center'
+                                },
+                                tooltip: {
+                                    trigger: 'item'
+                                },
+                                legend: {
+                                    orient: 'vertical',
+                                    left: 'left'
+                                },
+                                series: 
+                                [
+                                    {
+                                        name: 'Impact',
+                                        type: 'pie',
+                                        radius: '50%',
+                                        color: ['#e5f61b', '#c0ef40','#9ae765','#75e08a','#50d8af','#2ad1d4','#05c9f9'],
+                                        data: [
+                                            { value: 1, name: '4' },
+                                            { value: 4, name: '5' },
+                                            { value: 8, name: '6' },
+                                            { value: 24, name: '7' },
+                                            { value: 63, name: '8' },
+                                            { value: 25, name: '9' },
+                                            { value: 89, name: '10' },
                                         ],
                                         emphasis: 
                                         {
