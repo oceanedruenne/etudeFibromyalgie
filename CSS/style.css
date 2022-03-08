@@ -191,12 +191,14 @@ h3
     margin-top: 100px;
 }
 
-#main_3
+#main_3,#main_4
 {
-    margin-left: 76px;
+  margin-left: 92px;
 }
 
-#main_4 , #main_5 , #main_6, #main_7, #main_8, #main_9, #main_10, #main_11, #main_12
+a 
 {
-  margin-left: 69px;
+  text-decoration: none;
+  font-weight: bolder;
+  color: black;
 }
